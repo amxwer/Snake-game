@@ -71,8 +71,12 @@ public class GameField extends JPanel implements ActionListener  {
         }
             else{
                 String str = "Game Over";
+                String score ="Your score:" + dots;
+                g.setColor(Color.WHITE);
                 g.setColor(Color.WHITE);
                 g.drawString(str,125,SIZE/2);
+                g.drawString(score,125, (int) (SIZE/1.7));
+
             }
         }
 
@@ -145,7 +149,7 @@ public class GameField extends JPanel implements ActionListener  {
             if(key == KeyEvent.VK_UP && !down){
                 right =false;
                 up=true;
-                right=false;
+                left=false;
             }
             if(key == KeyEvent.VK_DOWN && !up){
                 right =false;
